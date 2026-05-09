@@ -62,8 +62,8 @@ Complétez le circuit qui permet de sélectionner entre les deux opérations `a 
 <iframe style="width: 150%; height: 480px; border: 0" showonly="in out and xor halfadder" src="https://logic.modulo-info.ch/?id=CqY0Qy&mode=full&showonly=in,out-4,display,gate-array&data=N4NwXAHANAxg9gWwA5wHYFNUBcDOZgCWqADPlgJ5LpgDkRNUKeA2gKzFQDsxAulAQBNaAJgAsAWmGcGqAIYJqNWQwBGBXGFFQQsgDa1ixAIzEaAX36ojZSovqM4LdlCPc+gkRHEBmIzPmKKqrqeKIWcACuWKTAFFS0kVgMTGDMoiYubvxCNKyc4gBsplBqGlpyCrSyAAQAogAqAPQA8gCq1UEWsgBO3bLkMXGKsqgC4j195MmOqcKGLnPuqLTe4iYMibRGRmui5lAT-daxtgnd47390yxzHN7evJYrwj4AnBtRtKLE4qLe+wgIgAPQanGiAoHXVLeOaZR5EL4SVjCD5YWisVasAoMABm3UQkCgWDgmjMFgA7gRuugWMwxFBvHw6awoKImcIClBWOzOFACuzoJx2a8oBAmQ8oK9xUYXI9mNtWWyoPLhKzucqjN5WfyNVpRELlRiuQa2FpWGLDSzWFLDZyijweGYgA"></iframe>
 
 
-
-Un clic droit sur la porte quadruple permet de choisir son type (AND, OR, XOR, NAND, NOR, XNOR).
+<!-- 
+Un clic droit sur la porte quadruple permet de choisir son type (AND, OR, XOR, NAND, NOR, XNOR). -->
 
 ## 4. ALU
 

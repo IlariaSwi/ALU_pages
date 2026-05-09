@@ -1,10 +1,20 @@
 # TP ALU
 
-L'unité arithmétique et logique (ALU) permet de choisir parmi un certain nombre d'opérations. Nous allons voir comment une ALU peut choisir entre différentes opérations (ET, OU, addition, soustraction) à l'aide d'un **multiplexeur**.
+Nous avons vu en classe que l'unité arithmétique et logique (ALU) permet de choisir parmi un certain nombre d'opérations.
+
+Nous avons aussi vu comment fonctionne un circuit "sélecteur", qui permet donc de choisir entre deux fonctionnalités différentes. Dans l'exemple suivant, le circuit sélecteur (en jaune) permet de choisir entre :
+
+- `X OR Y`
+- `X AND Y`
+
+![ALU](./img/circuit_selecteur.png)
+
+
+<!-- L'unité arithmétique et logique (ALU) permet de choisir parmi un certain nombre d'opérations. Nous allons voir comment une ALU peut choisir entre différentes opérations (ET, OU, addition, soustraction) à l'aide d'un **multiplexeur**.
 
 Nous allons découvrir comment des décalages et additions successives peuvent constituer une **multiplication** ou une **division**.
 
-Finalement, un **registre** permet de mémoriser les opérandes du calcul. Un registre particulier appelé **accumulateur** permet de faire des additions successives et *accumuler* une somme courante.
+Finalement, un **registre** permet de mémoriser les opérandes du calcul. Un registre particulier appelé **accumulateur** permet de faire des additions successives et *accumuler* une somme courante. -->
 
 ## 1. Sélectionneur
 
@@ -13,29 +23,45 @@ L'entrée **sel** du sélectionneur permet de choisir entre deux signaux d'entr�
 * entrée 0 : signal lent (période de 2 s)
 * entrée 1 : signal rapide (période de 250 ms)
 
-<!-- diagramme interactif -->
-
 Recréez un tel sélecteur avec des portes NON, ET, OU.
+
+
+<iframe style="width: 150%; height: 480px; border: 0" showonly="in out and xor halfadder" src="https://logic.modulo-info.ch/?id=CJJr18&mode=full&showonly=in,out,clock,not,and,or&data=N4NwXAHANAxg9gWwA5wHYFNUBcDOZgwA2cMA1gAz5YCeS6YA5ESaQ1CngNoCM55U3AEzkAulACWAEzAB2AMxRUAQwT0GmLACcAl+gAE3NnU3i40wQFZyAX1jEy3KrTXMyRuF1785oidIjciipqGjr65EboJmZgwny24qiUwDR0jInuXHECPmJwJhqMqGxSkIJBqow46IRsIEqEYNwJqI4pzunF7B5gPLxQACx8eQXYRSXSAJyBypUM1bVQ9Y3NUHAArljJqWobWJm9A1ZQMr6lMgMVajj5WOLoDLZ7bTuMewecR-yCAGxnU+VZtdbvdHlAlKhJNsOgwIZIPpZvrkJKhehAFBABnlNpALLY4S8YXCEccfGdUZwID8oBAZNisJAILZUHAtk40gwWftup5TlA5LwxIlIJM1jjJjYoAh1gAPaEc6UyhF8E7kxgWbgAWgscjYezAFkuADNNIhYlAsHAmtZbAB3cSadBcTjyKAWQRiTiGk6XYBIU1IJQAcyUdzQABEakpqE0+DZPQE3dwE+UdZ6JTS6VBONMaZMRCJrEA"></iframe>
+
+
+
+
 
 ## 2. Multiplexeur
 
 Le multiplexeur (MUX) permet de choisir entre deux signaux 4-bits nommés a et b.
-Ajoutez les éléments qui manquent.
+Ajoutez les éléments qui manquent:
 
-<!-- diagramme interactif -->
 
-* Ajoutez une deuxième entrée 4-bits avec un affichage.
-* Ajoutez un décodeur et affichage à 7 segments.
+* Ajoutez une deuxième entrée 4-bits avec un affichage;
+* Ajoutez un décodeur (bloc déc. 7 seg) et un affichage à 7 segments;
+* Ajoutez une entrée pour la sélection;
+* Réglez les entrées pour que: 
+  * quand le bit de sélection est à 1, le display à 7 segments affiche le nombre 6;
+  * quand le bit de sélection est à 0, le display à 7 segments affiche le nombre 3.
+
+
+
+<iframe style="width: 150%; height: 480px; border: 0" showonly="in out and xor halfadder" src="https://logic.modulo-info.ch/?id=CJJr18&mode=full&showonly=in,in-4,out-4,display,7seg,dec-7seg&data=N4NwXAHANAxg9gWwA5wHYFNUBcDOZgCWqADPlgJ5LpgDkRNUKeA2gKzFQCMxxAulAQAmtAMwiAtCIBsDVAEME1GnIYAjArjAAWKCDkAbWsW6caAXyiCCOJKWAUqtKzf1zyDJmGacATB258AsI0IgDs4lrE5lAIAK4AHnYOSnHxHnAsPn5c7PxEtH7iPhAMcLFYBQCckj4MAGYAToiQUFhw2mYWAO4EDegszGJQfvyDOj6coyKswz5TUsMiUyJQYVM6IhBTMyKV81CRvLxmQA"></iframe>
 
 ## 3. Sélection d'opérations
 
 Complétez le circuit qui permet de sélectionner entre les deux opérations `a ET b` et `a OU b`.
 
-<!-- diagramme interactif -->
 
-* Connectez a et b aux entrées des 4 portes OU,
-* Ajoutez une sorie 4-bits pour afficher le résultat des opérations logiques
+* Connectez a et b aux entrées de la quadruple porte OU,
 * Ajoutez une entrée de sélection pour le multiplexeur.
+
+
+
+<iframe style="width: 150%; height: 480px; border: 0" showonly="in out and xor halfadder" src="https://logic.modulo-info.ch/?id=CqY0Qy&mode=full&showonly=in,out-4,display,gate-array&data=N4NwXAHANAxg9gWwA5wHYFNUBcDOZgCWqADPlgJ5LpgDkRNUKeA2gKzFQDsxAulAQBNaAJgAsAWmGcGqAIYJqNWQwBGBXGFFQQsgDa1ixAIzEaAX36ojZSovqM4LdlCPc+gkRHEBmIzPmKKqrqeKIWcACuWKTAFFS0kVgMTGDMoiYubvxCNKyc4gBsplBqGlpyCrSyAAQAogAqAPQA8gCq1UEWsgBO3bLkMXGKsqgC4j195MmOqcKGLnPuqLTe4iYMibRGRmui5lAT-daxtgnd47390yxzHN7evJYrwj4AnBtRtKLE4qLe+wgIgAPQanGiAoHXVLeOaZR5EL4SVjCD5YWisVasAoMABm3UQkCgWDgmjMFgA7gRuugWMwxFBvHw6awoKImcIClBWOzOFACuzoJx2a8oBAmQ8oK9xUYXI9mNtWWyoPLhKzucqjN5WfyNVpRELlRiuQa2FpWGLDSzWFLDZyijweGYgA"></iframe>
+
+
 
 Un clic droit sur la porte quadruple permet de choisir son type (AND, OR, XOR, NAND, NOR, XNOR).
 

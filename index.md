@@ -141,21 +141,21 @@ Dans certains cas on aura donc besoin de 5 bits pour représenter correctement l
 
 Pour les nombres non signés (première ALU) :
 
-* Choisissez des valeurs a et b qui produisent un dépassement (C = 1), et donc un affichage incorrect sur une sortie de 4 bits.
-* Ajoutez en plus un affichage 8 bits et connectez-y les 4 bits de S et C comme 5e bit, pour afficher le résultat correct.
+* Choisissez des valeurs a et b qui produisent un dépassement (C<sub>out</sub> = 1), et donc un affichage incorrect sur une sortie de 4 bits.
+* Ajoutez en plus un affichage 8 bits et connectez-y les 4 bits de S et C<sub>out</sub> comme 5e bit, pour afficher le résultat correct.
 
 Pour les nombres signés (deuxième ALU) :
 
 * Ajoutez 2 entrées 4 bits et 1 sortie 4 bits.
 * Ajoutez 3 affichages 4 bits configurés (via menu contextuel) en nombres signés.
 * Choisissez des valeurs a et b négatives qui produisent un dépassement (V = 1).
-* Ajoutez un affichage 8 bits configuré (via le menu contextuel) en nombres signés, et connectez-y les 4 bits de S et C comme 5e bit.
+* Ajoutez un affichage 8 bits configuré (via le menu contextuel) en nombres signés, et connectez-y les 4 bits de S et C<sub>out</sub> comme 5e bit.
 
-**Attention** : Dans ce cas vous devez connecter C également avec les 3 autres bits (b5-b7) pour faire une propagation du bit de signe et traiter correctement le cas des nombres négatifs.
+**Attention** : Dans ce cas vous devez connecter C<sub>out</sub> également avec les 3 autres bits (b5-b7) pour faire une propagation du bit de signe et traiter correctement le cas des nombres négatifs.
 
 
 
-<iframe style="width: 100%; height: 580px; border: 0" showonly="in out and xor halfadder" src="https://logic.modulo-info.ch/?id=CqY0Qy&mode=full&showonly=in,out,in-4,out-4,alu,display,display-8&showonly=in,out,in-8,alu,display-8&data=N4NwXAHANAxg9gWwA5wHYFNUBcDOZgCWqADPlgJ5LpgDkRNUKeA2gKzFQCcxAulAQBNaARggBaAEzCGqAIYJqNWQwBGBXGAAsUELIA2tYkekBffqmFlKi+ozgt2UYdz6DaEgGyTOM+YpWq6njaugY0xsQ0ZgIEOEikwBRUtDFxerLkDExgzMJGXLz8QjQSEpKsUVCpSJaJ1imxSOmZdix5HM6FbjQAzMRiPT2VcACuWAlJiqNYWfY5EtxOml3FPawDEIEamtGNElbJNNXNsyw9AOwdy66rnGKaEsNjtZO006fzixLsN1o9UHIFLQAMLTAAEAAoAE7oLCYEboMECRE4OBQrAEdAASieWH2dUO71a82WUFYHhWkH+gMUADVIXBaegoQAzPRwADuOLM+hGE3qSj0Iw+uQgVy6qEMYjyDGmImE0vOlV5LwFvJFnSgDwltE0mjErE0srGtFY6w8pig6RU6D0-MO1ttGr6UAkhThAA8sLRUIgVDCcGDfagwTgCABzVAAS5wlUdelVDtkNr0GvyC3d6C9Pr9AdDEejsZMZg5BADOVFUEKuU4Tj4zDdrvrUigPXroldEnbtYkbagDY4Ek0zeErtYzY8Wub5zJzegHmbtfOE9b1YkM56wjnra7-YWrb7uVHa3bElbC-7wn+F3b2h6EHbx84p611avWq3l+0D3bM80h9YWsIDbHgTCAA"></iframe>
+<iframe style="width: 100%; height: 650px; border: 0" showonly="in out and xor halfadder" src="https://logic.modulo-info.ch/?id=CqY0Qy&mode=full&showonly=in,out,in-4,out-4,alu,display,display-8&showonly=in,out,in-8,alu,display-8&data=N4NwXAHANAxg9gWwA5wHYFNUBcDOZgCWqADPlgJ5LpgDkRNUKeA2gKzFQCcxAulAQBNaARggBaAEzCGqAIYJqNWQwBGBXGAAsUELIA2tYkekBffqmFlKi+ozgt2UYdz6DaEgGyTOM+YpWq6njaugY0xsQ0ZgIEOEikwBRUtDFxerLkDExgzMJGXLz8QjQSEpKsUVCpSJaJ1imxSOmZdix5HM6FbjQAzMRiPT2VcACuWAlJiqNYWfY5EtxOml3FPawDEIEamtGNElbJNNXNsyw9AOwdy66rnGKaEsNjtZO006fzixLsN1o9UHIFLQAMLTAAEAAoAE7oLCYEboMECRE4OBQrAEdAASieWH2dUO71a82WUFYHhWkH+gMUADVIXBaegoQAzPRwADuOLM+hGE3qSj0Iw+uQgVy6qEMYjyDGmImE0vOlV5LwFvJFnSgDwltE0mjErE0srGtFY6w8pig6RU6D0-MO1ttGr6UAkhThAA8sLRUIgVDCcGDfagwTgCABzVAAS5wlUdelVDtkNr0GvyC3d6C9Pr9AdDEejsZMZg5BADOVFUEKuU4Tj4zDdrvrUigPXroldEnbtYkbagDY4Ek0zeErtYzY8Wub5zJzegHmbtfOE9b1YkM56wjnra7-YWrb7uVHa3bElbC-7wn+F3b2h6EHbx84p611avWq3l+0D3bM80h9YWsIDbHgTCAA"></iframe>
 
 [Solution](https://logic.modulo-info.ch/?id=CqY0Qy&mode=full&data=N4NwXAHANA9gDgFwM5mDATgSwOaYHZgDaADFAMwBMAugL5QDGMAtnDHgKZ7Kr7GoIBPOOzAByfKKisUhAKykAnMSpRMAEzEBGCAFoKmyXgCGTEaKOSARpm4AWKCCMAbLcWIG6+TfyFmJUmBl5KE0lFXUxCgA2PQVDEzNLKxsUe0cXUU13YlE6NUwkOD5gQWExfMKnIwFJaSIsxWVVDVEKCj1ZXKgKuG8S33KCuCqagJkGkLDmsTJiHTIyLpgAVwRi0rMVhFrAogolENsmiNEyWXmIZLs8oYofMtEekZ2ZMgB2Uk0j8JayBR1bBQlqs+hsxFsXnsDhR5D8wLYyFBjKYxABhLYAAgAFOh2AhOMt2Bi1ESkBgEJh2ABKYEIO79B4QsZ7I5QWRRY4aCCI5FmABq2JgfPY6AAZk4YAB3Gl0ZzLdYDcxOZaQwjaT7fVQEURzLKSLZaTQ6TRvLpy0GKuWq0KkQHHbW2Ww6WS2fWrMSyc5RDxa+lg8R4VVRWTkD5wwhkeyiKLtKKulTWOwOZyuPWePBke5+QPMwjBqC2MPTaNey5QROpZMZTQNLo9TMMsxParWzQh96csRRf5vIFQdBGfIADzAxuIN0Ktizg0qLdzNZDhc7ojeZB0byikgHw9HWToWwb-qZdUIMMXFGXbzeOggOXLKXhE7gsmnjyGz1zkdtF-DEE0UAgCgAPsCBZBUbdMBHMcnyiV9m1GE9ZAvcgphOCAYgURZ724aAIKgvduiGN44PfOcT1sA4vmXBQnSyAxsJQCA6CqSx2CcBUHhYtjrVmKAfygfEhwQMQ8GYSxcSQDFRLwDEkBwPAAEukC6LinAtTijFYpxrTcPipkE4TRFEphxPYSS5OwRTlJoOhJUwCSiDVaAmjVBQQhUU9SGoKBT3-MgPO0PjvNcvj-J85CKFsDz9D4sDwqiAtoreNlougKJorct5ooS2YkvITRUvIYL9nIMK1T8uK1SAsh0p8zREXeAL7DICAAr8hQAqAzU1URWwCrq+xAQC5KEQ82Q3O5DzIwLKKfJjAtKqiXrarzQasrmxdWrmhKKI8qJkthOboFkfqI3sbs9qAos80RN5TrjKBez2kNVz2hK3lmvNkreRboA3MaXvWuR3q2uRvo6nzZGgW8AYA072QA4LZGSiBPqhgDKs9ACVoRiAgeRgDQfRiAIbzf8pjJqAFHu8ngu9KmyprKnPs0ICFEq+qqZWr4qaBk0qda2ggA)
 

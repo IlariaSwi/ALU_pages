@@ -1,3 +1,8 @@
+<script>
+  MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
 # TP ALU
 
 Nous avons vu en classe que l'unité arithmétique et logique (ALU) permet de choisir parmi un certain nombre d'opérations.
@@ -238,7 +243,8 @@ Pour multiplier `0101` x `1001` = `00101101` (5 x 9 = 45) nous écrivons en colo
 
 Cet algorithme peut être exprimé mathématiquement comme
 
-$$ produit = \sum^4_{i=0} (b_i \cdot a) \cdot 2^i $$
+
+$$ produit = \sum_{i=0}^{3} (b_i \cdot a) \cdot 2^i $$
 
 Modifiez a et b dans le circuit multiplicateur 4 x 4 bits ci-dessus vérifiez que vous obtenez bien le produit de a et b. Faites une capture d'écran avec la plus grande valeur possible.
 
